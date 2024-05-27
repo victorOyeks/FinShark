@@ -28,7 +28,7 @@ namespace api.Controllers
         }
 
     [HttpGet]
-    [Authorize]
+    // [Authorize]
     public async Task<IActionResult> GetUserPortfolio()
     {
         var username = User.GetUsername();
@@ -39,7 +39,7 @@ namespace api.Controllers
     }
 
     [HttpPost]
-    [Authorize]
+    // [Authorize]
     public async Task<IActionResult> AddPortfolio(string symbol)
     {
         var username = User.GetUsername();
