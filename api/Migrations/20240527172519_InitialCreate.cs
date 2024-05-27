@@ -202,7 +202,8 @@ namespace api.Migrations
                 columns: table => new
                 {
                     AppUserId = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    StockId = table.Column<int>(type: "int", nullable: false)
+                    StockId = table.Column<int>(type: "int", nullable: false),
+                    Id = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -226,8 +227,8 @@ namespace api.Migrations
                 columns: new[] { "Id", "ConcurrencyStamp", "Name", "NormalizedName" },
                 values: new object[,]
                 {
-                    { "0daaae92-ff9a-4e81-88cf-7cc41784ca41", null, "User", "USER" },
-                    { "20ac9380-ed19-4134-8a22-ffc56cf232b9", null, "Admin", "ADMIN" }
+                    { "075eaed8-0b49-4c47-921a-9fe852d3a18d", null, "User", "USER" },
+                    { "313b3f4e-5402-443d-97f2-09387ee773e6", null, "Admin", "ADMIN" }
                 });
 
             migrationBuilder.CreateIndex(
