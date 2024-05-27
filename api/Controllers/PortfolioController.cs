@@ -67,5 +67,39 @@ namespace api.Controllers
             return Ok(portfolioModel);
         }
     }
+
+
+        //[HttpPost]
+        //[Authorize]
+        //public async Task<IActionResult> AddPortfolios(string symbol)
+        //{
+        //    var username = User.GetUsername();
+        //    var appUser = await _userManager.FindByNameAsync(username);
+        //    var stock = await _stockRepository.GetBySymbolAsync(symbol);
+
+        //    if (stock == null) return BadRequest("Stock not found");
+
+        //    var userPortfolio = await _portfolioRepository.GetUserPortfolio(appUser);
+
+        //    if (userPortfolio.Any(e => e.Symbol.ToLower() == symbol.ToLower())) return BadRequest("Cannot add same stock to portfolio");
+
+        //    var portfolioModel = await _portfolioRepository.CreateAsync(new Portfolio
+        //    {
+        //        StockId = stock.Id,
+        //        AppUserId = appUser.Id
+        //    });
+
+        //    if (portfolioModel == null)
+        //    {
+        //        return StatusCode(500, "Could not create");
+        //    }
+        //    else
+        //    {
+        //        // Return the created resource
+        //        return CreatedAtAction(nameof(GetUserPortfolio), new { id = portfolioModel.AppUser }, portfolioModel);
+
+        //        //GetPortfolio this getporfolio should be a method you have to maybe get portfolio by ID
+        //    }
+        //}
     }
 }
